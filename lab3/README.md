@@ -40,7 +40,7 @@ If there are no rows with more then one object, it starts to take one object ran
 
 ## 2) Evolution Algorithm
 - The file of task 2 is `2_GA.ipynb` 
-- For this task I've been working with: [Davide Aiello - Github](https://github.com/davideaiello/CI22-23_s303296). He had the idea of using evolutionary algorithm in order to find the best strategy to play the game, and then we coded together the solution
+- For this task I've been working with: [Gabriele Greco - Github](https://github.com/GabriG23/computational-intelligence-2022-2023-s303435). I had the idea of using evolutionary algorithm in order to find the best strategy to play the game, and then we coded together the solution
 - I Nim Class is the one used in by professor
 - population_size = `20`, offspring_size = `10`, num_generations = `100`, tournament_size = `2`, genetic_operator_randomness for mutation = `0.7`
 - `Number of games` played: `100`
