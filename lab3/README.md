@@ -115,5 +115,11 @@ INFO:root:NUM_MATCHES : 10 - ratio as player1: 0.0, ratio as player2: 0.0
 INFO:root:NUM_MATCHES : 50 - ratio as player1: 0.0, ratio as player2: 4.0
 INFO:root:NUM_MATCHES : 100 - ratio as player1: 0.0, ratio as player2: 3.0
 
+If we try without the `depth` and with `MIN_SIZE`= 3, we obtain those results against the optimal strategy:
+INFO:root:NUM_MATCHES : 10 - ratio as player1: 100.0, ratio as player2: 0.0
+INFO:root:NUM_MATCHES : 50 - ratio as player1: 100.0, ratio as player2: 0.0
+INFO:root:NUM_MATCHES : 100 - ratio as player1: 100.0, ratio as player2: 0.0
+
+
 ## 4) Reinforcement learning
 - Working in progress
