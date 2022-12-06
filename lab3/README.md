@@ -70,6 +70,15 @@ Description
 ##### Results optimal strategy
 - INFO:root:The best strategy is<function GabriG_strategy> with 100.0% winrate (fitness)
 
+### Alternative
+I also wrote an alternative with respect to the previous part in which a genome is made off two parameters, alpha and beta. This two parameter determine the strategy which will be played based on the range in which they fall(see the function ``build_strategy``). The idea in this case is not starting from already hard coded rules but exploit very simple choices in order to find a sort of their combination which can provide a good result.
+In this case I didn't take into account the bound k.
+
+For example, againts `pure_random`, we obtain this result:
+
+- the best winrate is 68.0 with paramter: alpha 0.3 - beta 0.72
+
+
 ## 3) MinMax
 - In order to write the minmax strategy I started from this code found online:
 
