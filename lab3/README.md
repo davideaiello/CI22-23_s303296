@@ -71,7 +71,49 @@ Description
 - INFO:root:The best strategy is<function GabriG_strategy> with 100.0% winrate (fitness)
 
 ## 3) MinMax
-- Working in progress
+- In order to write the minmax strategy I started from this code found online:
+
+```
+def minimax(state, max_turn):
+    if state == 0:
+        return 1 if max_turn else -1
+    possible_new_states = [
+        state - take for take in (1, 2, 3) if take <= state
+    ]
+    if max_turn:
+        scores = [
+            minimax(new_state, max_turn=False)
+            for new_state in possible_new_states
+        ]
+        return max(scores)
+    else:
+        scores = [
+            minimax(new_state, max_turn=True)
+            for new_state in possible_new_states
+        ]
+        return min(scores)
+```
+
+It takes into account one row with at most 3 possible moves starting from the actual one and considering as a winner whom leaves the last object.
+Then I extended it taking into account all the possible moves on the board and a value of depht in order to reduce the computational cost.
+I also adding a small change on the strategy: if the minmax function is not able to find any value of 1 (which means a good move on the road to win), it picks a random move.
+
+Here we are different result with `MIN_SIZE` = 4 and `depth` = 3. k was putted to a value eual to 100 in order to not be taked into account.
+
+##### Results vs pure random
+INFO:root:NUM_MATCHES : 10 - ratio as player1: 80.0, ratio as player2: 80.0
+INFO:root:NUM_MATCHES : 50 - ratio as player1: 94.0, ratio as player2: 92.0
+INFO:root:NUM_MATCHES : 100 - ratio as player1: 93.0, ratio as player2: 93.0
+
+##### Results vs shortest row
+INFO:root:NUM_MATCHES : 10 - ratio as player1: 70.0, ratio as player2: 90.0
+INFO:root:NUM_MATCHES : 50 - ratio as player1: 88.0, ratio as player2: 86.0
+INFO:root:NUM_MATCHES : 100 - ratio as player1: 89.0, ratio as player2: 89.0
+
+##### Results vs optimal strategy
+INFO:root:NUM_MATCHES : 10 - ratio as player1: 0.0, ratio as player2: 0.0
+INFO:root:NUM_MATCHES : 50 - ratio as player1: 0.0, ratio as player2: 4.0
+INFO:root:NUM_MATCHES : 100 - ratio as player1: 0.0, ratio as player2: 3.0
 
 ## 4) Reinforcement learning
 - Working in progress
