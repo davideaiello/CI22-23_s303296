@@ -101,24 +101,24 @@ I also adding a small change on the strategy: if the minmax function is not able
 Here we are different result with `MIN_SIZE` = 4 and `depth` = 3. k was putted to a value eual to 100 in order to not be taked into account.
 
 ##### Results vs pure random
-INFO:root:NUM_MATCHES : 10 - ratio as player1: 80.0, ratio as player2: 80.0
-INFO:root:NUM_MATCHES : 50 - ratio as player1: 94.0, ratio as player2: 92.0
-INFO:root:NUM_MATCHES : 100 - ratio as player1: 93.0, ratio as player2: 93.0
+- INFO:root:NUM_MATCHES : 10 - ratio as player1: 80.0, ratio as player2: 80.0
+- INFO:root:NUM_MATCHES : 50 - ratio as player1: 94.0, ratio as player2: 92.0
+- INFO:root:NUM_MATCHES : 100 - ratio as player1: 93.0, ratio as player2: 93.0
 
 ##### Results vs shortest row
-INFO:root:NUM_MATCHES : 10 - ratio as player1: 70.0, ratio as player2: 90.0
-INFO:root:NUM_MATCHES : 50 - ratio as player1: 88.0, ratio as player2: 86.0
-INFO:root:NUM_MATCHES : 100 - ratio as player1: 89.0, ratio as player2: 89.0
+- INFO:root:NUM_MATCHES : 10 - ratio as player1: 70.0, ratio as player2: 90.0
+- INFO:root:NUM_MATCHES : 50 - ratio as player1: 88.0, ratio as player2: 86.0
+- INFO:root:NUM_MATCHES : 100 - ratio as player1: 89.0, ratio as player2: 89.0
 
 ##### Results vs optimal strategy
-INFO:root:NUM_MATCHES : 10 - ratio as player1: 0.0, ratio as player2: 0.0
-INFO:root:NUM_MATCHES : 50 - ratio as player1: 0.0, ratio as player2: 4.0
-INFO:root:NUM_MATCHES : 100 - ratio as player1: 0.0, ratio as player2: 3.0
+- INFO:root:NUM_MATCHES : 10 - ratio as player1: 0.0, ratio as player2: 0.0
+- INFO:root:NUM_MATCHES : 50 - ratio as player1: 0.0, ratio as player2: 4.0
+- INFO:root:NUM_MATCHES : 100 - ratio as player1: 0.0, ratio as player2: 3.0
 
 If we try without the `depth` and with `MIN_SIZE`= 3, we obtain those results against the optimal strategy:
-INFO:root:NUM_MATCHES : 10 - ratio as player1: 100.0, ratio as player2: 0.0
-INFO:root:NUM_MATCHES : 50 - ratio as player1: 100.0, ratio as player2: 0.0
-INFO:root:NUM_MATCHES : 100 - ratio as player1: 100.0, ratio as player2: 0.0
+- INFO:root:NUM_MATCHES : 10 - ratio as player1: 100.0, ratio as player2: 0.0
+- INFO:root:NUM_MATCHES : 50 - ratio as player1: 100.0, ratio as player2: 0.0
+- INFO:root:NUM_MATCHES : 100 - ratio as player1: 100.0, ratio as player2: 0.0
 
 
 ## 4) Reinforcement learning
