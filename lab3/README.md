@@ -131,4 +131,78 @@ If we try without the `depth` and with `MIN_SIZE`= 3, we obtain those results ag
 
 
 ## 4) Reinforcement learning
-- Working in progress
+- In order to accomplish this task, I took into account the code related to the Maze, given by the professor, and then I adapted it to the Nim game. I used the Agent class and I slighted modified the Nim class. I choose to implement the code by exploiting three different rewards:
+- -1 if the move leads me to a defeat
+- 0 if the move doesn't terminate the game
+- 1 if the move leads me to a victory
+
+Then I evaluated the number of set of matches nedeed to reach a convergence value for the win rate. Each set consists in 100 games. 
+The agent starts as second player and I didn't take into account k.
+`NIM_SIZE` = 7
+
+##### Results vs dummy strategy
+- INFO:root:0: 52.0
+- INFO:root:20: 56.99999999999999
+- INFO:root:40: 99.0
+- INFO:root:60: 97.0
+- INFO:root:80: 100.0
+- INFO:root:100: 100.0
+- INFO:root:120: 100.0
+
+##### Results vs shortest row
+- INFO:root:0: 17.0
+- INFO:root:20: 42.0
+- INFO:root:40: 100.0
+- INFO:root:60: 100.0
+- INFO:root:80: 100.0
+
+##### Results vs my strategy
+- INFO:root:0: 42.0
+- INFO:root:20: 38.0
+- INFO:root:40: 89.0
+- INFO:root:60: 84.0
+- INFO:root:80: 95.0
+- INFO:root:100: 89.0
+- INFO:root:120: 85.0
+- INFO:root:140: 86.0
+- INFO:root:160: 81.0
+- INFO:root:180: 90.0
+- INFO:root:200: 85.0
+- INFO:root:220: 81.0
+- INFO:root:240: 82.0
+- INFO:root:260: 86.0
+- INFO:root:280: 88.0
+
+##### Results vs pure random
+- INFO:root:0: 49.0
+- INFO:root:20: 43.0
+- INFO:root:40: 56.0
+- INFO:root:60: 41.0
+- INFO:root:80: 49.0
+- INFO:root:100: 48.0
+- INFO:root:120: 47.0
+- INFO:root:140: 46.0
+- INFO:root:160: 46.0
+- INFO:root:180: 53.0
+- INFO:root:200: 43.0
+- INFO:root:220: 47.0
+- INFO:root:240: 48.0
+- INFO:root:260: 45.0
+- INFO:root:280: 53.0
+
+##### Results vs optimal strategy
+- INFO:root:0: 3.0
+- INFO:root:20: 0.0
+- INFO:root:40: 1.0
+- INFO:root:60: 0.0
+- INFO:root:80: 0.0
+- INFO:root:100: 0.0
+- INFO:root:120: 0.0
+- INFO:root:140: 0.0
+- INFO:root:160: 0.0
+- INFO:root:180: 0.0
+- INFO:root:200: 0.0
+- INFO:root:220: 0.0
+- INFO:root:240: 0.0
+- INFO:root:260: 0.0
+- INFO:root:280: 0.0
